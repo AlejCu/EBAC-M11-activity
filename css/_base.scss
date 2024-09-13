@@ -1,0 +1,10 @@
+$main-color: #222222;
+$secondary-color: #2c70c9;
+$white-text-color: #ebebeb;
+
+
+@mixin main-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}

@@ -1,0 +1,182 @@
+@import "./base";
+
+html {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    border: 0;
+}
+
+
+/* Header begins */
+
+header {
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    img {
+        width: 16em;
+        margin: 5px;
+    }
+}
+
+
+nav {
+    
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        text-decoration: none;
+        background-color: $secondary-color;
+        padding: 16px 24px;
+        color: $white-text-color;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $white-text-color;
+            color: #3d3d3d;
+        }
+    }
+    
+}
+
+/* Header ends */
+
+
+/* Main page starts */
+
+main {
+    padding: 20px;
+}
+
+
+#main-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h1 {
+        @include main-title;
+    }
+}
+
+#generations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .gen-article {
+        display: block;
+        margin: auto;
+
+
+        .gen-article__img-section {
+            display: block;
+            margin: auto;
+        }
+
+
+        .card {
+            background-color: $main-color;
+            color: $white-text-color;
+            font-size: .9em;
+        }
+        
+
+        img {
+            width: 15em;
+        }
+    }
+}
+
+
+#poke-ball {
+    width: 25em;
+}
+
+
+section {
+    background-color: #bdbdbd;
+    padding: 10px;
+}
+
+
+.pokemon-games__img {
+
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    
+    img {
+        width: 13em;
+    }
+}
+
+
+.pokemon-games__container {
+
+    h1 {
+        @include main-title;
+        margin-top: 50px;
+    }
+}
+
+/* Main page ends  */
+
+
+/* Footer starts */
+
+footer {
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    img {
+        width: 8em;
+        margin: 15px
+    }
+
+    .more-info__links {
+
+        a {
+            color: $white-text-color;
+            text-decoration: none;
+            margin: 10px;
+        }
+    }
+}
+
+
+.more-info__social-media {
+    display: flex;
+    align-items: center;
+}
+
+
+.social-media-icons {
+    border: 1px solid #0000;
+    fill: $white-text-color;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    padding: 5px 7px;
+    margin: 10px;
+
+
+    &:hover {
+        background-color: $white-text-color;
+        transition: .1s ease-in-out;
+        fill: $main-color;
+    }
+}
+
+/* Footer ends */
